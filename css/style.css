@@ -1,0 +1,247 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+html,body{
+height:100%;
+}
+.container{
+padding: 0 2%;
+width:100%;
+max-width: 1280px;
+}
+a{
+text-decoration: none;
+}
+header{
+    background-color: rgb(137, 144, 247);
+padding:30px 0
+}
+header .container{
+display:flex;
+justify-content: space-between;
+}
+#nav #menu {
+    display:flex;
+    list-style-type: none;
+}
+
+#nav #menu  a{
+padding:0 20px;
+color:white;
+}
+#nav #menu {
+color:inherit;
+font-size:22px;
+text-decoration: none;
+}
+#nav #menu  li{
+padding: 0 20px;}
+
+.logo{
+width:200px;
+height:80px;
+background-color: rgb(247, 216, 216);
+}
+
+section.banner{
+    padding: 30px 0;
+background-image: url(../images/bg-banner.jpg);
+background-size: cover;
+background-position: center;
+height: 90vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+flex-wrap: wrap;
+}
+
+section.banner h2{
+font-size: 55px;
+color:white
+    }
+section.banner h2 span{
+color: blue;
+}
+section.banner a{
+top: 80px;
+text-decoration: none;
+border:3px solid blue;
+padding:15px;
+color:rgb(171, 177, 248);
+font-size:22px;
+border-radius:12px;
+position: relative;
+}
+section.banner a:hover{
+background-color: blue;
+color:white;
+
+}
+section.trabalhos .container{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+section.trabalhos{
+width:100%;
+    padding:30px 0;
+    background-color:rgb(100,125,200);
+}
+section.trabalhos  > h2{
+font-size: 25px;
+color:white;
+text-align: center;
+padding: 30px;
+}
+section.trabalhos .trabalhos-wrapper{
+width:calc((100% / 4) - 15px);
+margin:0  auto;
+
+}
+.trabalho-img{
+    width: 100% ;
+background-color: seagreen;
+padding-top: 100%;
+opacity: 0.3;}
+.trabalho-img:hover{
+opacity:1;
+}
+.trabalhos-wrapper h2{
+padding-top: 12px;
+ font-size: 19px;
+color:seashell;
+text-align: center;
+}
+section.tecnologias{
+background-color: aliceblue;
+padding: 30px  0;
+}
+section.tecnologias .container{
+display: flex;
+flex-wrap: wrap;
+}
+
+section.tecnologias > h2{
+text-align: center;
+color:rgb(214, 214, 230);
+font-size: 25px;
+}
+.tecnologia-wrapper{
+    width:calc((100% / 4) - 15px);
+margin: 0 auto;
+}
+.tecnologia-wrapper h2{
+font-size: 20px;
+color: darkslateblue;
+text-align: center;
+}
+.tecnologia-img{
+padding-top: 50%;
+    width:100%;
+background-color: darkmagenta;
+}
+
+footer{
+    padding: 30px 0;
+display: flex;
+flex-wrap: wrap;
+background-color: gray;
+justify-content: center;
+align-items: center;
+}
+
+footer p{
+    color: rgb(2, 1, 1);
+    font-size: 18px;
+    font-weight: bolder;
+}
+#button-mobile{
+display: none;
+}
+/*=========Media Queries============*/
+
+@media screen  and (max-width:768px){
+    #nav #menu{
+        display:none;
+    }
+
+        #nav.active  #menu{
+            position: absolute;
+            display: block;
+            width:100%;
+            height:150px;
+            text-align: center;
+            padding: 12px;
+            top:120px;
+            right:0;
+            background-color:rgb(137, 144, 247);;
+
+    }
+    #button-mobile{
+        cursor: pointer;
+        display: flex;
+        padding: 1rem;
+        z-index: 999;
+        background: none;
+        border: none;
+      }
+    #menu a{
+       margin: 1rem 0;
+        }
+        #menu a:hover{
+transition: .3s;
+color: violet;
+        }
+
+#hamburger{
+border-top:2px solid;
+display:block;
+color: rgb(189, 130, 238);
+x}
+#hamburger::before,#hamburger::after{
+content: "";
+display: block;
+width: 22px;
+height: 2px;
+margin-top: 5px;
+background-color: currentColor;
+transition: .3s;
+position: relative;
+}
+#nav.active #hamburger{
+border-top: transparent;
+}
+
+#nav.active #hamburger::before{
+transform: rotate(135deg);
+}
+#nav.active #hamburger::after{
+    transform: rotate(-135deg);
+top:-7px
+    }
+
+section.trabalhos .container{
+    text-align: center;
+    display: block;
+
+}
+section.trabalhos .trabalhos-wrapper{
+width:80%;
+margin: 0 auto;
+}
+}
+
+@media screen  and (max-width:468px){
+
+    section.banner h2{
+        font-size: 35px;
+         }
+
+         section.banner a{
+             top:30px;
+             font-size:16px;
+}
+}
